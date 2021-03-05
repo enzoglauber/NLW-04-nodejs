@@ -31,6 +31,7 @@
 ```zsh
   // create
   yarn orm migration:create -n CreateUsers
+  yarn orm migration:create -n CreateSurveys
 
   // running
   yarn orm migration:run
@@ -54,6 +55,47 @@
   yarn add uuid
   yarn add @types/uuid -D
 ```
+
+```text
+  Testes Automatizados
+  1 - Testes unitários
+  2 - Testes de integração
+
+  yarn add jest @types/jest -D
+  yarn jest --init
+  yarn add ts-jest -D
+  yarn add supertest @types/supertest -D
+
+    ✔ Would you like to use Jest when running "test" script in "package.json"? … yes
+    ✔ Would you like to use Typescript for the configuration file? … yes
+    ✔ Choose the test environment that will be used for testing › node
+    ✔ Do you want Jest to add coverage reports? … no
+    ✔ Which provider should be used to instrument code for coverage? › v8
+    ✔ Automatically clear mock calls and instances between every test? … yes
+
+```
+
+// jest.config.ts:
+```ts
+  (...)
+  bail: true,
+  preset: "ts-jest",
+  testMatch: [
+    "**/__tests__/*.test.ts"
+  ],
+  (...)
+```
+
+// package.json:
+```json
+  (...)
+  "scripts": {
+    "test": "NODE_ENV=test jest"
+  },
+  (...)
+```
+
+
 
 
 
