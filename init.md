@@ -18,6 +18,11 @@
   yarn add sqlite3
 
   yarn add pg
+
+  // email
+  yarn add nodemailer
+  yarn add @types/nodemailer -D
+  yarn add handlebars
 ```
 
 // setting orm cli  
@@ -32,6 +37,7 @@
   // create
   yarn orm migration:create -n CreateUsers
   yarn orm migration:create -n CreateSurveys
+  yarn orm migration:create -n CreateSurveysUsers
 
   // running
   yarn orm migration:run
@@ -94,6 +100,8 @@
   },
   (...)
 ```
+
+// Email fake
 
 
 
