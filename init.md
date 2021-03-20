@@ -23,6 +23,10 @@
   yarn add nodemailer
   yarn add @types/nodemailer -D
   yarn add handlebars
+
+  //validation
+  yarn add yup
+  yarn add express-async-errors
 ```
 
 // setting orm cli  
@@ -56,7 +60,7 @@
   (...)
 ```
 
-// uuid gerencia os ids da applicação:
+// uuid gerencia os ids da aplicação:
 ```zsh
   yarn add uuid
   yarn add @types/uuid -D
@@ -101,7 +105,10 @@
   (...)
 ```
 
-// Email fake
+// kill them all
+```zsh
+kill -9 $(lsof -t -i:3333)
+```
 
 
 
